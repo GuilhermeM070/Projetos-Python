@@ -10,9 +10,5 @@ ano = int(input("Escolha um ano: "))
 resultado = verificador_ano_bissexto(ano)
 print(resultado)
     
-#print(a); // Imprime o dado
-
-
-# TODO: Verifique se o ano é bissexto utilizando uma estrutura de controle condicional, como if/else:
 
 
