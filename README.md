@@ -12,14 +12,14 @@ Este repositório contém uma coleção de projetos desenvolvidos durante os cur
 ## Projetos Destacados
 
 ### Sistema Bancário
-![Sistema Bancário](https://via.placeholder.com/600x300?text=Sistema+Banc%C3%A1rio)
+![Sistema Bancário](images/sistema_bancario.png)
 Implementação de um sistema bancário que suporta:
 - Depósitos e saques.
 - Transferências entre contas.
 - Consulta de saldo.
 
 ### Calculadora
-![Calculadora](https://via.placeholder.com/600x300?text=Calculadora)
+![Calculadora](images/calculadora.png)
 Um aplicativo de linha de comando que permite realizar operações matemáticas como:
 - Soma
 - Subtração
@@ -27,7 +27,7 @@ Um aplicativo de linha de comando que permite realizar operações matemáticas 
 - Divisão
 
 ### Jogo da Adivinhação
-![Jogo da Adivinhação](https://via.placeholder.com/600x300?text=Jogo+da+Adivinha%C3%A7%C3%A3o)
+![Jogo da Adivinhação](images/jogo_adivinhacao.png)
 Um jogo divertido onde o usuário tenta adivinhar um número entre 1 e 100, com feedback fornecido após cada tentativa.
 
 ## Como Usar
