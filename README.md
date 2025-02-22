@@ -72,6 +72,7 @@ Antes de executar o script, **instale a biblioteca `requests`** para realizar a 
 
 ```bash
 pip install requests
+```
 
 ## Contribuições
 
@@ -90,3 +91,5 @@ Este repositório está licenciado sob a [MIT License](LICENSE).
 ---
 
 Explore os projetos e aproveite para expandir seus conhecimentos em Python!
+
+
