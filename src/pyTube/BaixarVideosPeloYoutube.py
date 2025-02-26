@@ -16,11 +16,17 @@ while True:
         print(f"\nTítulo: {yt.title}")
         print(f"Thumbnail: {yt.thumbnail_url}")
 
-        stream = yt.streams.get_highest_resolution()  # Melhor resolução disponível
-        output_path = "C:\\Users\\Guima\\Videos\\Python"
+        #stream = yt.streams.get_highest_resolution()  # Melhor resolução disponível
+        #output_path = "C:\\Users\\Guima\\Videos\\Python"
         
-        print("\nBaixando o vídeo... Aguarde.")
-        stream.download(output_path=output_path)  # Faz o download do vídeo
+        #print("\nBaixando o vídeo... Aguarde.")
+        #stream.download(output_path=output_path)  # Faz o download do vídeo
+
+        stream = yt.streams.get_audio_only()  # Stream de audio
+        output_path = "C:\\Users\\Guima\\Videos\\Python"
+
+        print("\nBaixando o audio... Aguarde.")
+        stream.download(output_path=output_path)  # Faz o download do audio
         
         print("\nDownload concluído com sucesso! O arquivo está salvo em:", output_path)
 
