@@ -1,17 +1,29 @@
 from pytubefix import YouTube
+from pytubefix.cli import on_progress  # Authenticate once for subsequent downloads
 
-print("Bem vindo ao programa de baixar videos do YouTube!")
+print("Bem-vindo ao programa de baixar vídeos do YouTube!")
 
-yt = YouTube(input("Insira o link do video: ")) # Insira o link do video...
+while True:
+    url = input("\nInsira o link do vídeo (ou digite 'sair' para encerrar): ")
+    
+    if url.lower() == "sair":
+        print("Programa encerrado. Até mais!")
+        break  # Sai do loop se o usuário digitar 'sair'
 
-print(yt.title) # Para descobrir o título do video...
+    try:
+        yt = YouTube(url, use_oauth=True, allow_oauth_cache=True, on_progress_callback=on_progress)
 
-print(yt.thumbnail_url) # Para receber a URL da Thumb...
+        print(f"\nTítulo: {yt.title}")
+        print(f"Thumbnail: {yt.thumbnail_url}")
 
-#stream = yt.streams.get_audio_only() # Para baixar somente o audio...
-stream = yt.streams.get_highest_resolution() # Melhora a resolução do vídeo...
+        stream = yt.streams.get_highest_resolution()  # Melhor resolução disponível
+        output_path = "C:\\Users\\Guima\\Videos\\Python"
+        
+        print("\nBaixando o vídeo... Aguarde.")
+        stream.download(output_path=output_path)  # Faz o download do vídeo
+        
+        print("\nDownload concluído com sucesso! O arquivo está salvo em:", output_path)
 
-#stream.download(mp3=True)
-stream.download(output_path="C:\\Users\\Guima\\Videos\\Python")
+    except Exception as e:
+        print(f"\nErro ao baixar o vídeo: {e}\nTente novamente.")
 
-print("Video ou Música Baixado Com Sucesso!")
